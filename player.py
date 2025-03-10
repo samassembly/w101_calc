@@ -7,6 +7,7 @@ class Player:
         self.school = school
         self.lvl = lvl
         self.spellbook = []
+        self.gear_mod = 1
     
     def fill_spellbook(self):
         #get all spells from database and add death spells
@@ -15,7 +16,7 @@ class Player:
         
         runes = data['spells']
         for rune in runes:
-            if rune['school'] == self.school:
+            if (rune['school'] == self.school) and (rune['lvl_learned'] <= self.lvl):
                 if rune['type'] == "Attack":
                     min_damage = rune['min_damage']
                     max_damage = rune['max_damage']
