@@ -1,0 +1,54 @@
+{
+    "spells": [ 
+        { 
+        "name" : "Deathblade",
+        "school" : "Death",
+        "pip_cost" : 0,
+        "accuracy" : 1,
+        "type" : "Charm",
+        "lvl_learned" : 7,
+        "target" : "Self",
+        "buff" : 0.35,
+        "description" : "Applies a 35% Death Damage or Steal Charm"
+        },
+        {
+        "name" : "Lifeblade",
+        "school" : "Life",
+        "pip_cost" : 0,
+        "accuracy" : 1,
+        "type" : "Charm",
+        "lvl_learned" : 0,
+        "target" : "Self",
+        "buff" : 0.35,
+        "description" : "Applies a 35% Life Damage Charm"
+        },
+        {
+        "name" : "Dark Sprite",
+        "school" : "Death",
+        "pip_cost" : 1,
+        "accuracy" : 0.85,
+        "type" : "Attack",
+        "lvl_learned" : 1,
+        "target" : "Enemy",
+        "buff" : 0,
+        "description" : "Deals 65-105 Death Damage",
+        "min_damage" : 65,
+        "max_damage" : 105
+        },
+        {
+        "name" : "Banshee",
+        "school" : "Death",
+        "pip_cost" : 3,
+        "accuracy" : 0.85,
+        "type" : "Attack",
+        "lvl_learned" : 10,
+        "target" : "Enemy",
+        "buff" : 0,
+        "description" : "Deals 245-305 Death Damage",
+        "min_damage" : 245,
+        "max_damage" : 305
+        }
+    ],
+    "enemies": [],
+    "players": []
+}

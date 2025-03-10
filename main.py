@@ -1,4 +1,5 @@
 from spell import *
+from player import *
 
 def main():
     curr_stack = Magic_Stack()
@@ -20,6 +21,13 @@ def main():
 
     print("What is left on the stack: ")
     curr_stack.check_stack()
+
+    print("Creating famed Necromancer, Samuel ShadowSong!")
+    death_student = Player("Samuel ShadowSong", "Death", 164)
+    print("Retrieving a Master Necromancer Spellbook...")
+    death_student.fill_spellbook()
+    print("The following spells are in the spellbook:")
+    death_student.check_spellbook()
     
 
 if __name__ == "__main__":

@@ -25,10 +25,6 @@ class Magic_Stack:
     def add_spell(self, spell):
         (self.stack).append(spell)
 
-    # def remove_spell(self, spell):
-    #     (self.stack).remove(spell)
-
-
     def cast_stack(self, casted_spell):
         #FIFO resolve status, all unique casts get added to modifiers
         cast_school = casted_spell.school
