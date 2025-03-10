@@ -1,0 +1,66 @@
+Spell Example:
+
+Name: Deathblade
+School: Death
+Pip_cost: 0
+Accuracy: 100%
+Type: Charm
+Lvl_learned: 7
+
+Target: Self or Ally
+Buff: 35%
+
+Description: Applies a 35% Death Damage or Steal Charm
+
+
+Enemy Example:
+
+Name: Lost Soul
+Rank: 1
+Health: 55
+Classification: Undead
+School: Death
+
+Starting Pips: 1
+Incoming Boost: None
+Incoming Resist: None
+Stunable: True
+Buguilable: True
+
+
+Player Example:
+
+Name: Samuel ShadowSong
+School: Death               // Used to detemine what class of spells to show
+Lvl: 164                    // Used to determine what spells are available
+
+Health: 9000
+Mana: 600
+
+Gear Stats                  // We are only concerned with damage stats for purposes of calculation
+Head: 24%
+Body: 28%
+Legs: 18%
+Athame: 12%
+Ring: 16%
+
+
+App Walkthrough:
+1. Welcome, please choose a character:
+    -Samuel ShadowSong (Death)
+    -Samuel MythWeaver (Myth)
+2. What enemy are you facing? 
+    -Lost Soul
+    -Dark Fairy
+    -Rattlebones
+3. What spells are you casting? 
+    -Deathblade
+    -Deathtrap
+    -Dark Sprite
+    -Banshee
+
+4. Examples of output
+    -You will deal 320 damage, defeating Rattlebones! Congrats Wizard!
+    -You will deal 110 damage, leaving Rattlebones with 85 health. Keep casting Wizard!
+
+    -Would you like to calculate a new attack? Y/N
