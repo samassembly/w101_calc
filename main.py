@@ -1,11 +1,18 @@
-from spell import Spell
+from spell import *
 
 def main():
-    print("Creating a Deathblade")
-    new_spell = Spell("Deathblade", "Death", 0, 1.00, "Charm", 7, "Self", 0.35, "Applies a 35% Death Damage or Steal Charm")
+    curr_stack = Magic_Stack()
 
-    print("What does Deathblade do again?")
-    print(new_spell.help())
+    death_blade = Spell("Deathblade", "Death", 0, 1.00, "Charm", 7, "Self", 0.35, "Applies a 35% Death Damage or Steal Charm")
+    dark_sprite = Spell("Dark Sprite", "Death", 1, 0.85, "Attack", 1, "Enemy", 0, "Deals 65-105 Death Damage", 65, 105)
+
+    print("Casting a Deathblade...")
+    curr_stack.add_spell(death_blade)
+
+    print("Casting a Dark Sprite!")
+    min, max = curr_stack.cast_stack(dark_sprite)
+    print(f"You will deal between {min} and {max} to the target.")
+    
 
 if __name__ == "__main__":
     main()
