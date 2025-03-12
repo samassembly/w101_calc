@@ -1,5 +1,5 @@
 import json
-from spell import Spell
+from spell import *
 
 class Player:
     def __init__(self, name, school, lvl):
@@ -8,6 +8,11 @@ class Player:
         self.lvl = lvl
         self.spellbook = []
         self.gear_mod = 1
+
+        self.fill_spellbook()
+        self.check_spellbook()
+
+        self.offense_stack = Magic_Stack()
     
     def fill_spellbook(self):
         #get all spells from database and add death spells
@@ -26,5 +31,22 @@ class Player:
                 self.spellbook.append(Spell(rune['name'], rune['school'], rune['pip_cost'], rune['accuracy'], rune['type'], rune['lvl_learned'], rune['target'], rune['buff'], rune['description'], min_damage, max_damage))
     
     def check_spellbook(self):
+        print("This wizard has the following spells at his disposal:")
         for page in self.spellbook:
             print(page.name)
+
+    # def cast_spell(self, spell):
+    #     if spell.type == "Charm":
+    #         self.cast_charm(spell)
+    #     elif spell.type == "Attack":
+    #         self.cast_attack(spell, target)
+
+#cast a buffing spell to add to your stack
+    def cast_charm(self, charm):
+        self.offense_stack.add_spell(charm)
+        print(f"You casted a {charm.name}!")
+
+#cast an attack at enemy object
+    def cast_attack(self, attack, target):
+        minimum, maximum = self.offense_stack.cast_stack(attack, target)
+        print(f"Your {attack.name} will deal between {minimum}-{maximum} damage to the {target.name}")

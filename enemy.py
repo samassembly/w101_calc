@@ -12,7 +12,6 @@ class Enemy:
         self.beguilable = beguilable
 
         self.defense_stack = []
-        self.offense_stack = []
 
     def help(self):
         output = f"A {self.name} is a {self.classification} of rank {self.rank}. They start combat with {self.health} health."

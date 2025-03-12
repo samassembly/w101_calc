@@ -25,10 +25,11 @@ class Magic_Stack:
     def add_spell(self, spell):
         (self.stack).append(spell)
 
-    def cast_stack(self, casted_spell):
+    def cast_stack(self, casted_spell, target):
         #FIFO resolve status, all unique casts get added to modifiers
         cast_school = casted_spell.school
         resolved_spells = []
+        #loop through offensive stack
         for i in range(len(self.stack)):
             #make sure spell hasn't bene resolved and it the correct type
             if (self.stack[i].school == cast_school):
@@ -38,8 +39,10 @@ class Magic_Stack:
                 resolved_spells.append(self.stack[i])
         for j in range(len(resolved_spells)):
             (self.stack).remove(resolved_spells[j])
+ 
         min_damage = math.ceil(casted_spell.min_damage * self.multiplier)
         max_damage = math.ceil(casted_spell.max_damage * self.multiplier)
+        self.multiplier = 1
         return min_damage, max_damage
     
     def check_stack(self):
