@@ -49,6 +49,19 @@
         "max_damage" : 305
         }
     ],
-    "enemies": [],
+    "enemies": [
+        {
+        "name" : "Lost Soul",
+        "rank" : 1,
+        "health" : 55,
+        "classification" : "Undead",
+        "school" : "Death",
+        "starting_pips" : 1,
+        "incoming_boost" : 0,
+        "incoming_resist" : 0,
+        "stunnable" : true,
+        "beguilable" : true
+        }
+    ],
     "players": []
 }
